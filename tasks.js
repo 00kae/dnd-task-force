@@ -1,5 +1,15 @@
+
 const MAX_TASK = 50;
 // maximum task number 
+const task_list = new Map();
+
+class Task {
+    constructor(position, task) {
+        this.position = position;
+        this.task = task;
+  }
+}
+
 
 
 function add_task(){
@@ -8,6 +18,7 @@ function add_task(){
     // task to list 
         // elseif clicked outside, then close new empty line
     // use a hashmap and also store the position???
+    task_list.set(Task.position, Task.task);
 
 };
 function remove_task(){};
