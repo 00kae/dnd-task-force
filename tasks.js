@@ -11,10 +11,15 @@ class Task {
         this.task = task;
   }
 }
+var input = getElementbyID("myInput");
+task_box.addEventListener("click", add_task());
 
-// var input should be in add_task ?? like the if keypress == enter
-// task_box.addEventListener("click", add_task);
-// var input = landing.getElementbyId("myInput")
+input.addEventListener("keypress", function(enter){
+    // if text box is not empty then
+    if (event.key === "enter"){
+
+    }
+});
 // user keypress
 
 
