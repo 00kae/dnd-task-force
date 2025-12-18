@@ -18,3 +18,8 @@ body {
 .dragging {
   opacity: 0.5;
 }
+
+.task-manager {
+  width:600px;
+  margin:auto;
+}
