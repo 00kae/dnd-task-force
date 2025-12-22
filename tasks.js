@@ -11,6 +11,7 @@ class Task {
         this.task = task;
   }
 }
+
 var input = getElementbyID("myInput");
 task_box.addEventListener("click", add_task());
 
