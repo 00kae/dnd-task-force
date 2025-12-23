@@ -11,14 +11,13 @@ class Task {
         this.task = task;
   }
 }
-
 var input = getElementbyID("myInput");
 task_box.addEventListener("click", add_task());
 
 input.addEventListener("keypress", function(enter){
     // if text box is not empty then
     if (event.key === "enter"){
-
+        // then the task is added!
     }
 });
 // user keypress
@@ -29,9 +28,10 @@ function add_task(){
     // if enter is pressed and task is filled with more than 1 char, then make a new line and add
     // task to list 
         // elseif clicked outside, then close new empty line
-    // use a hashmap and also store the position???
+    // use a hashmap and also store the position
     task_list.set(Task.position, Task.task);
     // then task is set to position (redundant.. but could work)
+    // sql to store
 
 };
 function remove_task(){};
