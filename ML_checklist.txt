@@ -1,0 +1,25 @@
+So here is a tentative list of things to do for the project, of course I'll help out however I can. This is a huge project because it also involves you looking for the data rather than it being given to you. This ML doesn't have to be perfect. It's just for the experience.
+Unfortunately it looks like alot of companies encourage the usage of AI so what I'd recommend is throw any kind of AI you know how to use into your resume and use it sparely if you want to learn.
+- Automate categorizing them.
+- Using Python and MySQL (the tasks will be stored in SQL)
+- So I am thinking that 1) Input: Tasks, Output: Motivational quote, with different type options. https://evantarver.com/types-of-motivation/
+	- Intrinsic
+		- Competence Motivation
+		- Attitude Motivation
+		- Achievement Motivation
+		- Creative Motivation
+		- Physiological Motivation
+	- Extrinsic
+		- Incentive Motivation
+		- Fear Motivation
+		- Power Motivation
+		- Social Motivation 
+	You should just pick a few to focus on so it's not overwhelming. Especially since a lot of tasks apply to multiple different types.
+- Create list of 'productivity keywords', mainly verbs like 'exercise' or 'finish'. Will also have to include all present participles?
+- Generate 'tag' for each keyword (Studying falls under all of them whereas exercise probably doesn't need competence). We probably might need to create a script and just heavily use the NOT operator lol
+- Create script to sift through tasks for keywords (Will be used in website)
+- Have motivational quotes with the same possible 'tags'. Based on the most tags present in a task list, output quote. If tie then pick random.
+
+Apparently Tensorflow is becoming old-fashion so focus your efforts on using Pytorch and/or Keras. Obviously would reccomend a crash course on LLM
+
+https://docs.pytorch.org/tutorials/beginner/basics/intro.html
