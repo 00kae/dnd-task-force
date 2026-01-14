@@ -14,13 +14,14 @@ class Task {
 var input = getElementbyID("myInput");
 task_box.addEventListener("click", add_task());
 
-input.addEventListener("keypress", function(enter){
-    // if text box is not empty then
-    if (event.key === "enter"){
-        // then the task is added!
-    }
-});
-// user keypress
+function taskSubmit(event) {
+    task_list.set(Task.position, Task.task);
+    
+    log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
+    event.preventDefault();
+}
+
+form.addEventListener("submit", taskSubmit);
 
 
 function add_task(){
@@ -29,11 +30,13 @@ function add_task(){
     // task to list 
         // elseif clicked outside, then close new empty line
     // use a hashmap and also store the position
-    task_list.set(Task.position, Task.task);
+
     // then task is set to position (redundant.. but could work)
     // sql to store
 
 };
-function remove_task(){};
+function remove_task(){
+
+};
 function completed_task(){};
 function update_task(){};
