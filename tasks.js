@@ -11,32 +11,23 @@ class Task {
         this.task = task;
   }
 }
-var input = getElementbyID("myInput");
-task_box.addEventListener("click", add_task());
+var task_input = getElementbyID("taskID");
 
-function taskSubmit(event) {
+function add_task(event) {
+    // if task is filled with more than 1 char, then make a new line and add task to list 
     task_list.set(Task.position, Task.task);
-    
     log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
     event.preventDefault();
-}
-
-form.addEventListener("submit", taskSubmit);
-
-
-function add_task(){
-    // eventlistener -> task text box is clicked, then ask for plaintext (will be in html)
-    // if enter is pressed and task is filled with more than 1 char, then make a new line and add
-    // task to list 
-        // elseif clicked outside, then close new empty line
-    // use a hashmap and also store the position
-
-    // then task is set to position (redundant.. but could work)
     // sql to store
-
+    //display task
 };
+
+form.addEventListener("submit", add_task);
+
 function remove_task(){
-
+    task_list.delete(Task.position);
 };
-function completed_task(){};
+function completed_task(){
+    // add task to completed list
+};
 function update_task(){};
