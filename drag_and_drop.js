@@ -18,6 +18,8 @@ target.addEventListener("dragover", (ev) => {
   ev.preventDefault();
 });
 
+console.log("working");
+
 target.addEventListener("drop", (ev) => {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text/plain");

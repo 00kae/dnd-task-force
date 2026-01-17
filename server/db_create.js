@@ -7,10 +7,13 @@ let con = mysql.createConnection({
   database: "mydb"
 });
 
+
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM customers", function (err, result, fields) {
+  console.log("Connected!");
+  con.query("CREATE DATABASE mydb", function (err, result) {
     if (err) throw err;
-    console.log(result);
+    console.log("Database created");
   });
 });
+
