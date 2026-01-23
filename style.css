@@ -1,6 +1,8 @@
 body {
   background-color: rgb(255, 255, 255);
+  font-family: sans-serif;
 }
+
 
 #draggable {
   text-align: center;
@@ -22,13 +24,14 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  text-align: center;
 }
 
 .top-right-element {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
 }
 .dragging {
   opacity: 0.5;
@@ -40,19 +43,25 @@ body {
 }
 
 .button-class {
-    background-color: #73ac5c;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
+  background-color: #73ac5c;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-    
+
+.button-class:hover {
+  background-color: #45a049;
+}
+
 .center-line {
   height: 75;
   width: 200;

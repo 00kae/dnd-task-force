@@ -1,18 +1,12 @@
-let mysql = require('mysql');
+const pool = require("./db"); // Pool file
 
-let con = mysql.createConnection({
-    host: "localhost",
-    user: "yourusername",
-    password: "yourpassword",
-    database: "mydb"
-});
+const sql = `
+  INSERT INTO customers (name, address)
+  VALUES ('Company Inc', 'Highway 37')
+`;
 
-con.connection(function(err) {
-    if (err) throw err;
-    console.log("Connected");
-    let sql = "INSERT INTO username (name) VALUES ('pepeppee'))";
-    con.query(sql, function(err, result){
-        if (err) throw err;
-        console.log("1 record inserted");
-    });
+pool.query(sql, (err, result) => {
+  if (err) throw err;
+    console.log("1 record inserted");
+  process.exit();
 });

@@ -1,18 +1,14 @@
-let mysql = require('mysql');
+const pool = require("./db"); // Pool file
 
-let con = mysql.createConnection({
-    host: "localhost",
-    user: "yourusername",
-    password: "yourpassword",
-    database: "mydb"
-});
+const sql = `
+  CREATE TABLE IF NOT EXISTS username (
+    name VARCHAR(255),
+    address VARCHAR(255)
+  )
+`;
 
-con.connection(function(err){
-    if (err) throw err;
-    console.log("Connected");
-    let sql = "CREATE TABLE username (name VARCHAR(255), address VARCHAR(255))";
-    con.query(sql, function(err, result){
-        if (err) throw err;
-        console.log("Table created");
-    });
+pool.query(sql, (err, result) => {
+  if (err) throw err;
+  console.log("Table created");
+  process.exit();
 });

@@ -8,6 +8,7 @@ function add_task(event) {
 };
 
 const form = document.getElementById("taskID"); 
+
 form.addEventListener("submit", add_task);
 
 
